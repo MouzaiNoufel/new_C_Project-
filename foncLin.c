@@ -15,15 +15,25 @@ void linear_regression(double x[], double y[], int n, double *m, double *b) {
 }
 
 int main() {
-    double x[] = {2011, 2012, 2013, 2014};
-    double y[] = {567595.43, 407274.78, 425815.28, 510732.68};
-    int n = sizeof(x) / sizeof(x[0]);
+    
+     int n;
+    printf("Enter the number of data points: ");
+    scanf("%d", &n);
+
+    double x[n], y[n];
+    printf("Enter the values for x and y:\n");
+    for (int i = 0; i < n; i++) {
+        printf("x[%d]: ", i + 1);
+        scanf("%lf", &x[i]);
+        printf("y[%d]: ", i + 1);
+        scanf("%lf", &y[i]);
+    }
 
     double m, b;
     linear_regression(x, y, n, &m, &b);
 
-    printf("Slope (m): %.2f\n", m);
-    printf("Intercept (b): %.2f\n", b);
+    printf("\nLinear Regression Equation: y = %.2fx + %.2f\n", m, b);
+
 
     return 0;
 }
