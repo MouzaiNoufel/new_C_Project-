@@ -15,7 +15,7 @@ void linear_regression(double x[], double y[], int n, double *m, double *b) {
 }
 
 int main() {
-    
+
      int n;
     printf("Enter the number of data points: ");
     scanf("%d", &n);
@@ -34,6 +34,6 @@ int main() {
 
     printf("\nLinear Regression Equation: y = %.2fx + %.2f\n", m, b);
 
-
+//naoufeeeeel
     return 0;
 }
